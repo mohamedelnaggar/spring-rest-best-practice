@@ -14,6 +14,9 @@ public class Book {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "isbn")
+    private String isbn;
+
     @Column(name = "author")
     private String author;
 
@@ -37,6 +40,14 @@ public class Book {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 
     public String getAuthor() {
@@ -68,6 +79,7 @@ public class Book {
         return "Book{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", isbn='" + isbn + '\'' +
                 ", author='" + author + '\'' +
                 ", numOfPages=" + numOfPages +
                 ", publishDate=" + publishDate +
