@@ -9,11 +9,11 @@ import java.util.List;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
-public class BooksResource extends ResourceSupport {
+public class BookListResource extends ResourceSupport {
 
     private final List<Book> data;
 
-    public BooksResource(List<Book> books) {
+    public BookListResource(List<Book> books) {
         this.data = books;
         this.add(linkTo(methodOn(BookController.class).getAllBooks()).withSelfRel());
     }

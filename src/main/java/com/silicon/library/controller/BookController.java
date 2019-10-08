@@ -3,7 +3,7 @@ package com.silicon.library.controller;
 import com.silicon.library.domain.Book;
 import com.silicon.library.exception.InvalidRequestParameterException;
 import com.silicon.library.resource.BookResource;
-import com.silicon.library.resource.BooksResource;
+import com.silicon.library.resource.BookListResource;
 import com.silicon.library.service.BookService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -32,10 +32,10 @@ public class BookController {
 
     @ApiOperation(value = "Returns a list of all books")
     @GetMapping("/books")
-    public ResponseEntity<BooksResource> getAllBooks() {
+    public ResponseEntity<BookListResource> getAllBooks() {
         logger.info("REST request to get all books");
         List<Book> books = bookService.getAllBooks();
-        return ResponseEntity.ok(new BooksResource(books));
+        return ResponseEntity.ok(new BookListResource(books));
     }
 
     @ApiOperation(value = "Returns the details of a given book by id")
