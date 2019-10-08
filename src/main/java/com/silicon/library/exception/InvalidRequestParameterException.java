@@ -1,4 +1,4 @@
-package com.silicon.payment.exception;
+package com.silicon.library.exception;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.FieldError;

@@ -1,6 +1,6 @@
-package com.silicon.payment.exception;
+package com.silicon.library.exception;
 
-import com.silicon.payment.resource.ApiErrorResource;
+import com.silicon.library.resource.ApiErrorResource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;

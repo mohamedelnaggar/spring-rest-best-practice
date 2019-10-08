@@ -1,6 +1,6 @@
-package com.silicon.payment.repository;
+package com.silicon.library.repository;
 
-import com.silicon.payment.domain.Category;
+import com.silicon.library.domain.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

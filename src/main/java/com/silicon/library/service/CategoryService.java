@@ -1,6 +1,6 @@
-package com.silicon.payment.service;
+package com.silicon.library.service;
 
-import com.silicon.payment.repository.CategoryRepository;
+import com.silicon.library.repository.CategoryRepository;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,4 +1,4 @@
-package com.silicon.payment.domain;
+package com.silicon.library.domain;
 
 import javax.persistence.*;
 

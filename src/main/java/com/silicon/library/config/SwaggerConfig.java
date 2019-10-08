@@ -1,4 +1,4 @@
-package com.silicon.payment.config;
+package com.silicon.library.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

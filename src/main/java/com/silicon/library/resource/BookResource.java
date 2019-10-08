@@ -1,7 +1,7 @@
-package com.silicon.payment.resource;
+package com.silicon.library.resource;
 
-import com.silicon.payment.controller.BookController;
-import com.silicon.payment.domain.Book;
+import com.silicon.library.controller.BookController;
+import com.silicon.library.domain.Book;
 import org.springframework.hateoas.ResourceSupport;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;

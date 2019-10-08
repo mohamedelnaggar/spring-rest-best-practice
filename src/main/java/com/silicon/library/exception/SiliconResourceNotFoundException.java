@@ -1,4 +1,4 @@
-package com.silicon.payment.exception;
+package com.silicon.library.exception;
 
 public class SiliconResourceNotFoundException extends RuntimeException {
 

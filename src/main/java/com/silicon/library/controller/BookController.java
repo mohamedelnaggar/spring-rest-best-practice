@@ -1,9 +1,9 @@
-package com.silicon.payment.controller;
+package com.silicon.library.controller;
 
-import com.silicon.payment.domain.Book;
-import com.silicon.payment.resource.BookResource;
-import com.silicon.payment.resource.BooksResource;
-import com.silicon.payment.service.BookService;
+import com.silicon.library.domain.Book;
+import com.silicon.library.resource.BookResource;
+import com.silicon.library.resource.BooksResource;
+import com.silicon.library.service.BookService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;

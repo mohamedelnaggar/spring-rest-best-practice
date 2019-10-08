@@ -1,7 +1,7 @@
-package com.silicon.payment.resource;
+package com.silicon.library.resource;
 
-import com.silicon.payment.controller.ErrorController;
-import com.silicon.payment.exception.ApiError;
+import com.silicon.library.controller.ErrorController;
+import com.silicon.library.exception.ApiError;
 import org.springframework.hateoas.ResourceSupport;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;

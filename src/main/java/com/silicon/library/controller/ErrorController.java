@@ -1,4 +1,4 @@
-package com.silicon.payment.controller;
+package com.silicon.library.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

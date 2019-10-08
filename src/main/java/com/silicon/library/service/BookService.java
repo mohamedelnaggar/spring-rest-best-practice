@@ -1,8 +1,8 @@
-package com.silicon.payment.service;
+package com.silicon.library.service;
 
-import com.silicon.payment.domain.Book;
-import com.silicon.payment.exception.SiliconResourceNotFoundException;
-import com.silicon.payment.repository.BookRepository;
+import com.silicon.library.domain.Book;
+import com.silicon.library.exception.SiliconResourceNotFoundException;
+import com.silicon.library.repository.BookRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
