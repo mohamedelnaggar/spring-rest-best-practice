@@ -26,7 +26,7 @@ public class SwaggerConfig {
     public Docket apiDocumentationBean() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.silicon.payment.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.silicon.library.controller"))
                 .build()
                 .apiInfo(getApiInformation())
                 .useDefaultResponseMessages(false)

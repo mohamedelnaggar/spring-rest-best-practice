@@ -1,6 +1,7 @@
 package com.silicon.library.domain;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.time.ZonedDateTime;
 
 @Entity
@@ -12,6 +13,7 @@ public class Book {
     private Long id;
 
     @Column(name = "name")
+    @NotEmpty
     private String name;
 
     @Column(name = "isbn")

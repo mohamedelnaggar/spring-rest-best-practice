@@ -1,6 +1,7 @@
 package com.silicon.library.controller;
 
 import com.silicon.library.domain.Book;
+import com.silicon.library.exception.InvalidRequestParameterException;
 import com.silicon.library.resource.BookResource;
 import com.silicon.library.resource.BooksResource;
 import com.silicon.library.service.BookService;
@@ -10,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -46,8 +48,11 @@ public class BookController {
 
     @ApiOperation(value = "Create a new book")
     @PostMapping("/books")
-    public ResponseEntity<BookResource> saveBook(@Valid @RequestBody Book book) {
+    public ResponseEntity<BookResource> saveBook(@Valid @RequestBody Book book, BindingResult bindingResult) {
         logger.info("REST request to save book with body {}", book);
+        if (bindingResult.hasErrors()) {
+            throw new InvalidRequestParameterException(bindingResult);
+        }
         Book savedBook = bookService.saveNewBook(book);
         return ResponseEntity.status(HttpStatus.CREATED).body(new BookResource(savedBook));
     }
@@ -70,7 +75,7 @@ public class BookController {
 
     @ApiOperation(value = "This is a hidden service", hidden = true)
     @DeleteMapping("/books/cache")
-    public ResponseEntity clearCache(){
+    public ResponseEntity clearCache() {
         return ResponseEntity.ok("Hidden service called");
     }
 
