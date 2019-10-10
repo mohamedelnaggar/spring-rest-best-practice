@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class ErrorController {
 
+    // TODO : implement returning error description based on error refrence
     @GetMapping("/errors/{errorReference}")
     public ResponseEntity getError(@PathVariable("errorReference") String errorReference){
         return ResponseEntity.notFound().build();

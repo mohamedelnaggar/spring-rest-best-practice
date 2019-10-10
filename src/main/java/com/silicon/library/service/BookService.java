@@ -3,6 +3,7 @@ package com.silicon.library.service;
 import com.silicon.library.domain.Book;
 import com.silicon.library.exception.SiliconResourceNotFoundException;
 import com.silicon.library.repository.BookRepository;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -32,11 +33,19 @@ public class BookService {
     }
 
     public Book updateBook(Long originalBookId, Book book) {
+        if(bookRepository.findOneById(originalBookId) == null){
+            throw new SiliconResourceNotFoundException(SiliconResourceNotFoundException.Resource.BOOK, originalBookId);
+        }
+        book.setId(originalBookId);
         return bookRepository.save(book);
     }
 
     public void deleteBook(Long bookId) {
-        bookRepository.deleteById(bookId);
+        try {
+            bookRepository.deleteById(bookId);
+        } catch (EmptyResultDataAccessException e) {
+            throw new SiliconResourceNotFoundException(SiliconResourceNotFoundException.Resource.BOOK, bookId);
+        }
     }
 
 }
